@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Year in Review — Samuel Brooks</title>
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --bg-alt: #f2f0ea;
+    --card: #ffffff;
+    --border: #e2ded3;
+    --text-primary: #24272b;
+    --text-secondary: #55595f;
+    --text-tertiary: #8b8f95;
+    --accent: #2b5da8;
+    --accent-dim: #e8eef7;
+    --serif: 'Georgia', 'Iowan Old Style', 'Palatino Linotype', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+
+  nav { border-bottom: 1px solid var(--border); background: var(--bg); }
+
+  .nav-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 22px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--text-primary); text-decoration: none; }
+
+  .nav-links { display: flex; gap: 30px; list-style: none; }
+  .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 15px; transition: color 0.15s ease; }
+  .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+  .mobile-toggle { display: none; background: none; border: none; color: var(--text-primary); font-size: 22px; cursor: pointer; }
+
+  .post-header { padding: 56px 0 40px; border-bottom: 1px solid var(--border); }
+
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none;
+    margin-bottom: 24px;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  .post-date { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+
+  .post-header h1 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 5vw, 38px);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+
+  .post-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .post-tag { font-size: 11px; color: var(--accent); background: var(--accent-dim); padding: 3px 9px; border-radius: 3px; }
+
+  .post-body { padding: 48px 0 80px; }
+
+  .post-body p { color: var(--text-secondary); font-size: 16.5px; margin-bottom: 22px; }
+  .post-body h2 {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 40px 0 16px;
+  }
+  .post-body code {
+    font-family: 'Courier New', monospace;
+    background: var(--bg-alt);
+    color: var(--accent);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  .post-body pre {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px;
+    overflow-x: auto;
+    margin-bottom: 22px;
+  }
+  .post-body pre code { background: none; padding: 0; color: var(--text-primary); }
+  .post-body blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 18px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 22px;
+  }
+
+  footer {
+    padding: 32px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    border-top: 1px solid var(--border);
+    background: var(--bg-alt);
+  }
+
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+    .mobile-toggle { display: block; }
+    .post-header { padding: 40px 0 32px; }
+    .post-body { padding: 36px 0 60px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Samuel Brooks</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="post-header">
+  <div class="container">
+    <a href="blog.html" class="back-link">← Back to Blog</a>
+    <div class="post-date">August 2026</div>
+    <h1>Second year in review
+    </h1>
+    <div class="post-tags">
+      <span class="post-tag">Tag One</span>
+      <span class="post-tag">Tag Two</span>
+    </div>
+  </div>
+</header>
+
+<article class="post-body">
+  <div class="container">
+    <p>
+    Hello everybody! For my first blog post, I thought it would be a good idea to summarise my second year of university. This should give you a good idea of my interests and studies. I look forward to sharing this with you, and I hope you enjoy reading it.
+    </p>
+    <h2>Term 1</h2>
+    <p>
+    First, I'll start with an introduction. I am Sam, and I am currently a student at Lancaster University's School of Computing and Communications. This year has been very eventful, with both achievements and struggles. It was definitely more challenging than my first year, with more deadlines, assignments, and problems to solve.
+
+    I started the year by being given my first-term assignments, which consisted of a small-scale database project, a networking emulation using Python's Mininet, my first experience using containers, and a study involving reaction time to digital stimuli. I also had a mid-term software design test. Alongside all of this, I was getting to grips with living off campus. Unlike my first year, where I lived in university accommodation, I had started renting a house away from campus. I had to adapt to new schedules, commuting, and navigating Lancaster's perplexing bus system.
+    One study I was involved in focused on human reaction time. This work was part of one of my core modules on Human-Computer Interaction. As a group, we had to conduct a study measuring human reaction time under two different conditions. To facilitate this, we built a program that measured a participant's reaction time. The two conditions we chose were different colours, which linked to what we were learning in lectures at the time. Our experiment measured how long it took for a participant to press a key on the keyboard after seeing a colour change on the screen. We built a small program that changed the screen colour and measured the time between the colour change and the keyboard input. The independent variable in this experiment was the colour of the screen. We measured reaction times when the screen changed to red and when it changed to blue. Surprisingly, we found a significant difference in the results, which I did not expect. As part of the study, we also created a presentation explaining our planned experiment, how we would conduct it, and our results. To complete the project, we presented it to one of the module's teaching assistants. We decided to create a video presentation, sharing the responsibility equally between the team members, with each person presenting a different section.
+
+    I really enjoyed this project. The content was interesting, and working with a great group of people made it an enjoyable experience. I learnt a lot from the module. Learning some of the biology behind computing was particularly interesting and not something I had expected to study. The teamwork and communication skills I developed will help me with every project I undertake in the future.
+    </p>
+
+    <h2>Term 2</h2>
+     <p>
+    
+    Now I'll move on to Term 2. Like the first term, I was given several coursework tasks at the beginning of the term. These included creating a podcast about sustainable computing, carrying out a penetration test, and designing a security system.
+
+    This term also marked the start of my optional modules. Up until this point, I had only studied modules that the university required everyone to take. Now I had more control over what I was learning, and not everyone on my course was studying the same subjects. I really liked this system because I could choose modules that genuinely interested me.  However, it did create a sense of missing out, as other students were learning about topics such as Artificial Intelligence and operating systems. It was difficult to judge whether you were falling behind based on the modules you had chosen. One of the modules I selected was Sustainable Computing. This is an unusual module, as not many universities offer it to undergraduate students. It is usually taught at postgraduate level, making it quite niche. While other students were learning about AI, which is all the rage at the moment, I wasn't. At times, this made me feel like I was missing out. However, those students were missing out on the Sustainable Computing module, so it was difficult to decide which modules were the best choice moving forward.
+
+    I'll now move on to a Cyber Security module that I took during this term. The module focused on penetration testing and digital forensics. The main assessment was a Capture the Flag assignment, where there were ten flags hidden within a system that I had to break into to retrieve. Each flag represented a different attack technique. This coursework was particularly challenging because I had never done anything like it before, and it was really my first experience with computer security. It took me a while to get my head around everything, but eventually I got into the swing of things and gradually completed each flag. The project was designed to simulate a real-life penetration test. Not only did we have to capture the flags, but we also had to produce a detailed report explaining how each flag was obtained, along with recommendations on how to secure the system against those attacks. I also had to write a report discussing the role of AI in penetration testing. I explored how I thought AI could best be used within penetration testing and where it was most appropriate. The report required references and evidence of the research I had carried out to support my conclusions. Towards the end of the module, we learned about digital forensics. I found it fascinating to see how digital investigations are conducted and what information can be recovered from devices, such as system logs. This part of the module also covered networking, which is an important area of computer security and one of my main academic interests.  
+    </p>
+
+    <p> 
+    Outside of academia, I achieved one of my personal goals by running a sub-two-hour half marathon in July. I completed the 21.1 km distance in just under 1 hour and 55 minutes, which I am incredibly proud of. It was something I had been training towards for a long time.
+    </p>
+
+    <p> 
+    Overall, it has been a very good year. It has had its challenges, but it has also provided many opportunities to learn and grow. I have developed a wide range of skills, and I hope to carry them into my third year at university and into every professional opportunity I encounter.
+
+    I think this is a good place to wrap up my first blog post. I really hope you have enjoyed reading it, and I hope you'll come back to read the next one!
+    </p>
+  
+
+    
+    
+    
+    
+    
+    
+    
+    <p>
+
+      Use <code>&lt;h2&gt;</code> tags like the one above to break your post into sections.
+      You can also use inline <code>code</code> formatting like this for technical terms.
+    </p>
+
+    <pre><code>// Use a &lt;pre&gt;&lt;code&gt; block like this for code snippets
+function example() {
+  return "formatted nicely";
+}</code></pre>
+
+    <blockquote>
+      Use a blockquote like this to highlight a quote or a key point.
+    </blockquote>
+
+    <p>
+      Wrap up your post with a closing paragraph here.
+    </p>
+  </div>
+</article>
+
+<footer>
+  2026 Samuel Brooks — Built with code.
+</footer>
+
+</body>
+</html>
