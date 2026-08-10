@@ -47,6 +47,7 @@
   nav {
     border-bottom: 1px solid var(--border);
     background: var(--bg);
+    position: relative
   }
 
   .nav-inner {
@@ -354,7 +355,30 @@
   }
 
   @media (max-width: 700px) {
-    .nav-links { display: none; }
+    .nav-links { display: none;
+    display: flex;
+      transform: translateY(-12px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 32px;
+      gap: 18px;
+      z-index: 50;
+      transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s; }
+    
+    .nav-links.open{
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
     .mobile-toggle { display: block; }
     section { padding: 52px 0; }
   }
@@ -444,6 +468,7 @@
           <span class="skill-tag">Node.js</span>
           <span class="skill-tag">Git</span>
           <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">Flask</span>
         </div>
       </div>
       <div class="skill-category">
@@ -532,19 +557,20 @@
           <a href="https://github.com/Sam3452/MyDreamGarage">GitHub</a>
         </div>
         <h3>MyDreamGarage</h3>
-        <p>A complete car encyclopedia with detailed information about various vehicles. You can add cars to yours own dream garage
+        <p>A complete car encyclopedia with detailed information about various vehicles. You can add cars to yours own dream garage. It uses an API that I have designed and created
         </p>
         <div class="project-stack">
           <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">Flask</span>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-links">
-          <a href="https://github.com/Sam3452/MyDreamGarage">GitHub</a>
+          <a href="https://github.com/Sam3452/WeatherDashboard">GitHub</a>
         </div>
         <h3>Weather Dashboard</h3>
-        <p>A dashboard that displays the current weather in my local area, Warrington
+        <p>A dashboard that displays the current weather in my local area
         </p>
         <div class="project-stack">
           <span class="stack-tag">React</span>
@@ -590,3 +616,12 @@
 <footer>
   2026 Samuel Brooks — Built with code.
 </footer>
+
+<script>
+  document.querySelector('.mobile-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
